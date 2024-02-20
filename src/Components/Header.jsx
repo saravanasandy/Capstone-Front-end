@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../assets/Logo.png";
+
 import { RiFlightTakeoffLine } from "react-icons/ri";
 
 const Header = () => {
