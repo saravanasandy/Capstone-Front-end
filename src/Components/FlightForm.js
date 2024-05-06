@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {createFlight, getFlights, reset} from '../features/flights/flightSlice'
 import FlightItem from './FlightItem';
 import Spinner from './Spinner';
+import { useNavigate } from 'react-router-dom';
 
 const FlightForm = () => {
   const [bookingData, setBookingData] = useState({
@@ -15,6 +16,7 @@ const FlightForm = () => {
   });
 
   const dispatch = useDispatch()
+  const navigate = useNavigate()
   
 
    const {Destination_From, Destination_To , Journey_Date, Guests, ClassType} = bookingData;
@@ -26,6 +28,9 @@ const FlightForm = () => {
     if (isError) {
      console.log(message);
     }
+    if (!user) {
+      navigate('/login')
+    }
 
    dispatch(getFlights())
 
@@ -33,7 +38,7 @@ const FlightForm = () => {
      dispatch(reset())
    }
 
- }, [user, isError, message,dispatch])
+ }, [user,navigate, isError, message,dispatch])
 
  if (isLoading) {
   return <Spinner/>
