@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from 'react'
+<<<<<<< HEAD
 import { FaCartPlus} from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux';
 import {createFlight, getFlights, reset} from '../features/flights/flightSlice'
 import FlightItem from './FlightItem';
 import Spinner from './Spinner';
+=======
+import {FaAd,FaDAndD,FaBookmark,FaBold, FaCartPlus} from 'react-icons/fa'
+import { useDispatch, useSelector } from 'react-redux';
+import {createFlight, getFlights, reset} from '../features/flights/flightSlice'
+import FlightItem from './FlightItem';
+>>>>>>> 22a387a62c39bbe03a2ff44795b293466bd454f1
 
 const FlightForm = () => {
   const [bookingData, setBookingData] = useState({
@@ -35,9 +42,12 @@ const FlightForm = () => {
 
  }, [user, isError, message,dispatch])
 
+<<<<<<< HEAD
  if (isLoading) {
   return <Spinner/>
 }
+=======
+>>>>>>> 22a387a62c39bbe03a2ff44795b293466bd454f1
   
     const onChange = (e)=>{
       setBookingData((prevState)=>({
@@ -75,6 +85,7 @@ const FlightForm = () => {
               <option className='option'>France</option>
               <option className='option'>Germany</option>
               <option className='option'>India</option>
+<<<<<<< HEAD
               <option className='option'>Brazil</option>
               <option className='option'>Malaysia</option>
               <option className='option'>Sri Lanka</option>
@@ -84,6 +95,8 @@ const FlightForm = () => {
               <option className='option'>Uzbekistan</option>
               <option className='option'>Poland</option>
               <option className='option'>Switzerland</option>
+=======
+>>>>>>> 22a387a62c39bbe03a2ff44795b293466bd454f1
             </select>
           </div>
         </div>
@@ -98,6 +111,7 @@ const FlightForm = () => {
               <option> Qatar</option>
               <option> Australia</option>
               <option> Italy</option>
+<<<<<<< HEAD
               <option> Turkey</option>
               <option> Iran</option>
               <option> Zimbabwe</option>
@@ -106,6 +120,8 @@ const FlightForm = () => {
               <option> Canada</option>
               <option> Colombia</option>
               <option> China</option>
+=======
+>>>>>>> 22a387a62c39bbe03a2ff44795b293466bd454f1
             </select>
           </div>
         </div>
